@@ -18,7 +18,5 @@ function createCardsWrapper() {
   `;
   $head.insertBefore($style, null);
 
-  console.log("Dentro do card-wrapper, esse arquivo só tem uma function");
-
   return $cardsWrapper;
 }
