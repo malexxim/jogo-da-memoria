@@ -6,6 +6,11 @@ function memoryCard() {
     .memory-card {
       width: 155px;
       height: 155px;
+      position: relative;
+    }
+    .memory-card .card {
+      width: 100%;
+      height: 100%;
       background-color: #f25a70;
       border-radius: 30px;
       display: flex;
@@ -14,13 +19,16 @@ function memoryCard() {
       box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
       position: relative;
       cursor: pointer;
+      position: absolute;
+      display: none;
     }
 
-    .memory-card.-front {
+    .memory-card .card.-front {
       background-color: #fff;
+      display: block;
     }
 
-    .memory-card.-front::before {
+    .memory-card .card.-front::before {
       content: "";
       width: 95px;
       height: 95px;
@@ -29,12 +37,12 @@ function memoryCard() {
       position: absolute;
     }
 
-    .memory-card > .icon {
+    .memory-card .card > .icon {
       width: 100px;
       height: 100px;
     }
 
-    .memory-card.-front > .icon {
+    .memory-card .card.-front > .icon {
       position: absolute;
       transform: translateY(-12px);
     }
@@ -43,20 +51,22 @@ function memoryCard() {
   $head.insertBefore($style, null);
 
   return ({ src, alt, nameClass }) => `
-    <article class="memory-card ${nameClass}">
+    <div class="memory-card">
+    <article class="card -front">
       <img
         src="${src}"
         alt="${alt}"
         class="icon"
         onClick="handleClick()"/>
     </article>
-    <article class="memory-card">
+    <article class="card">
       <img
         src="img/icon-collabcode.png"
         alt="O mascote da CollabCode o Gueio"
         class="icon"
         onClick="handleClick()"/>
     </article>
+    </div>
   `;
 }
 
