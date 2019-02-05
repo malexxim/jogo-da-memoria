@@ -20,19 +20,18 @@ function createCardsWrapper() {
   `;
   $head.insertBefore($style, null);
 
-  $cardsWrapper.addEventListener("click", event => {
-    const $origin = event.target;
+  $cardsWrapper.addEventListener("click", () => {
+    qtdActiveMemoryCard = $cardsWrapper.querySelectorAll(".memory-card.-active")
+      .length;
 
-    console.log("Origin:", event.target);
-    console.log("closest:", $origin.closest(".memory-card.-active"));
-
+    /* 
     if ($origin.closest(".memory-card.-active")) {
       qtdActiveMemoryCard = qtdActiveMemoryCard + 1;
     } else if ($origin.closest(".memory-card")) {
       qtdActiveMemoryCard = qtdActiveMemoryCard - 1;
-    }
+    } */
 
-    console.log("qtd:", qtdActiveMemoryCard);
+    console.log(qtdActiveMemoryCard);
   });
 
   return $cardsWrapper;
