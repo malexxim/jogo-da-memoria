@@ -74,6 +74,7 @@ function memoryCard() {
   `;
 }
 
+let score = 0;
 const handleClick = $component => {
   if (!$component.classList.contains("-active")) {
     if (qtdActiveMemoryCard < 2) {
@@ -87,7 +88,9 @@ const handleClick = $component => {
         $memoryCards[0].querySelector(".-front .icon").getAttribute("src") ===
         $memoryCards[1].querySelector(".-front .icon").getAttribute("src")
       ) {
-        console.log("São Iguais");
+        // score = score + 1;
+        score++;
+        console.log("Value score:", score);
       }
 
       setTimeout(() => {
