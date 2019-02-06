@@ -24,13 +24,6 @@ function createCardsWrapper() {
   $cardsWrapper.addEventListener("click", () => {
     qtdActiveMemoryCard = $cardsWrapper.querySelectorAll(".memory-card.-active")
       .length;
-
-    /* 
-    if ($origin.closest(".memory-card.-active")) {
-      qtdActiveMemoryCard = qtdActiveMemoryCard + 1;
-    } else if ($origin.closest(".memory-card")) {
-      qtdActiveMemoryCard = qtdActiveMemoryCard - 1;
-    } */
   });
 
   return $cardsWrapper;
