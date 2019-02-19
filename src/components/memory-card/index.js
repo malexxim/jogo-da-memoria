@@ -1,5 +1,5 @@
 const memoryCard = (function() {
-  function memoryCard() {
+  const create = () => {
     const $head = document.querySelector("head");
     const $style = document.createElement("style");
 
@@ -75,7 +75,7 @@ const memoryCard = (function() {
    </article>
     </div>
   `;
-  }
+  };
 
   const handleClick = $component => {
     if (!$component.classList.contains("-active")) {
@@ -84,13 +84,13 @@ const memoryCard = (function() {
     }
   };
 
-  function $activeMemoryCard($component) {
+  const $activeMemoryCard = $component => {
     if (qtdActiveMemoryCard < 2) {
       $component.classList.add("-active");
     }
-  }
+  };
 
-  function checkSure() {
+  const checkSure = () => {
     if (qtdActiveMemoryCard === 1) {
       const $activeMemoryCards = document.querySelectorAll(
         ".memory-card.-active"
@@ -119,10 +119,10 @@ const memoryCard = (function() {
         }, 1500);
       }
     }
-  }
+  };
 
   return {
-    new: memoryCard,
-    handleClick: handleClick
+    create,
+    handleClick
   };
 })();
