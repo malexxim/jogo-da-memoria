@@ -81,18 +81,18 @@ const memoryCard = (function() {
 
   module.handleClick = $component => {
     if (!$component.classList.contains("-active")) {
-      module.$activeMemoryCard($component);
-      module.checkSure();
+      module._$activeMemoryCard($component);
+      module._checkSure();
     }
   };
 
-  module.$activeMemoryCard = $component => {
+  module._$activeMemoryCard = $component => {
     if (qtdActiveMemoryCard < 2) {
       $component.classList.add("-active");
     }
   };
 
-  module.checkSure = () => {
+  module._checkSure = () => {
     if (qtdActiveMemoryCard === 1) {
       const $activeMemoryCards = document.querySelectorAll(
         ".memory-card.-active"
