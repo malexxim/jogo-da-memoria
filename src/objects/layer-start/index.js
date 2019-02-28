@@ -2,12 +2,6 @@ const layerStart = (function() {
   const module = {};
 
   module.handleClick = $component => {
-    //const $gameButton = $component.querySelector(".game-button");
-    //const $transparencyLayer = $component.querySelector(".transparency-layer");
-
-    //$gameButton.classList.add("-disable");
-    //$transparencyLayer.classList.add("-disable");
-
     const $children = $component.querySelectorAll("*");
 
     $children.forEach($item => $item.classList.add("-disable"));
