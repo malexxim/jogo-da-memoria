@@ -10,9 +10,8 @@ const flatButton = (function() {
       background-color: #eae6da;
       color: #fffcee;
       font-size: 24px;
-      font-weight: bold;
-      border: none;
-      width: 186px;
+      font-weight: bold;      
+      width: 50%;
       height: 176px;
       text-transform: uppercase;
     }
