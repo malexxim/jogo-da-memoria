@@ -18,7 +18,7 @@ const logoCollabcode = (function() {
   module.render = () => {
     module._style();
 
-    return `<img class="logo-collabcode" src="/img/icon-collabcode.png">`;
+    return `<img class="logo-collabcode" src="img/icon-collabcode.png">`;
   };
 
   return {
