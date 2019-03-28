@@ -17,6 +17,9 @@ const btnCollabcode = (function() {
         cursor: pointer;
 
       }
+      .input-collabcode + .btn-collabcode {
+        margin-top: 45px;
+      }
     `;
 
     $head.insertAdjacentElement("beforeend", $style);
