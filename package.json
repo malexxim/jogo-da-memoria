@@ -4,19 +4,24 @@
   "description": "Jogo da memória",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "live-server"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/malexxim/jogo-da-memoria.git"
   },
   "keywords": [
-    "jogo"
+    "jogo",
+    "memoria",
+    "game"
   ],
   "author": "Malexxim",
   "license": "MPL-2.0",
   "bugs": {
     "url": "https://github.com/malexxim/jogo-da-memoria/issues"
   },
-  "homepage": "https://github.com/malexxim/jogo-da-memoria#readme"
+  "homepage": "https://github.com/malexxim/jogo-da-memoria#readme",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
 }
