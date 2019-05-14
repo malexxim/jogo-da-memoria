@@ -11,17 +11,21 @@ const eyeCollabcode = (function() {
           background-repeat: no-repeat;
           background-position: center;
           display: block;
-          text-indent: -9999px ;
+          text-indent: -9999px;
           width: 24px;
           height: 15px;
           cursor: pointer;
         }
     `;
+
     $head.insertAdjacentElement("beforeend", $style);
   };
 
-  module.handleClick = () => {
-    console.log("Ae!!!");
+  module.handleClick = function() {
+    const attrFor = this.getAttribute("for");
+    const $input = document.querySelector(`#${attrFor}`);
+
+    $input.setAttribute("type", "text");
   };
 
   module.render = ({ attrFor = "" }) => {
@@ -31,7 +35,7 @@ const eyeCollabcode = (function() {
       <label
         for="${attrFor}"
         class="eye-collabCode"
-        onClick="eyeCollabcode.handleClick()">Mostrar senha</label>
+        onClick="eyeCollabcode.handleClick.bind(this)()">Mostrar senha</label>
     `;
   };
 
